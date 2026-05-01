@@ -2,6 +2,7 @@
 
 ## Overview
 
+Understanding rainfall patterns is essential because it dictates the survival of ecosystems by aligning biological cycles, like migration and flowering, with water availability. It serves as a primary indicator of climate change, allowing scientists to track the intensification of the hydrological cycle and predict extreme weather events. Furthermore, these patterns govern groundwater recharge and soil health, preventing land degradation and erosion. Finally, analyzing rainfall helps manage the transport of pollutants into water bodies, which is critical for maintaining water quality and preventing ecological collapses like algal blooms.
 This project analyzes historical rainfall data across different regions of India to understand long-term climate patterns, seasonal dependency, regional variability, and extreme weather behavior. It also applies statistical analysis and machine learning models to study rainfall predictability.
 
 The objective is to go beyond basic visualization and develop meaningful insights into climate variability and rainfall dynamics in India.
@@ -27,9 +28,9 @@ The objective is to go beyond basic visualization and develop meaningful insight
 - Granularity: Monthly rainfall aggregated by region
 - Features include:
   - Monthly rainfall (Jan to Dec)
-  - Seasonal aggregates
+  - Seasonal aggregates (Winter, Summer, Monsoon and Post-monsoon)
   - Annual rainfall
-  - Regional subdivisions
+  - Regional subdivisions (Various states of India)
 
 ---
 
@@ -43,7 +44,7 @@ The objective is to go beyond basic visualization and develop meaningful insight
   - Post-monsoon
 - Engineered lag feature (previous year rainfall)
 - Validated and cleaned annual rainfall values
-- Removed inconsistencies and missing data
+- Removed inconsistencies, missing data and duplicate values
 
 ---
 
@@ -75,6 +76,7 @@ Key insights from analysis:
 
 - Linear Regression
 - Random Forest Regressor
+In this case we see that Linear Regression gives slightly better results than Random Forest Regressor.
 
 ### Feature Engineering
 
@@ -92,15 +94,15 @@ Key insights from analysis:
 
 ## Important Observation 
 
-Initial models showed very high accuracy due to inclusion of monthly rainfall features, which directly sum to annual rainfall.
+Initial models showed very high accuracy due to inclusion of monthly rainfall features, which directly sum to annual rainfall. This led to data leakage, and the model was almost memorizing instead of learning the pattern.
 
-After removing these features and using only seasonal components and lag features, the model produced more realistic and interpretable performance.
+After removing these features and using only seasonal components and lag features and later just the lag feature, the model produced more realistic and interpretable performance.
 
 ---
 
 ## Key Findings
 
-- Rainfall exhibits strong temporal dependency across years
+- Rainfall exhibits strong temporal dependency across years, that is, time is a defining factor
 - Monsoon season dominates total rainfall in India
 - Regional variability indicates uneven climate risk distribution
 - Extreme rainfall events have significant impact despite low frequency
@@ -126,6 +128,10 @@ After removing these features and using only seasonal components and lag feature
 
 ---
 
+## Conclusion
+The analysis reveals that India’s extreme monsoon dependency necessitates a transition toward climate-resilient agricultural practices and decentralized water harvesting to ensure long-term food security. By identifying high-variability regions, we can implement targeted soil conservation and groundwater recharge strategies that mitigate land degradation and prevent ecological collapse. The findings emphasize that managing the hydrological cycle is not just about flood control, but about preserving the biological rhythms of diverse ecosystems. Strengthening predictive modeling through sustainable policy integration allows for better preparation against the intensifying stochastic nature of extreme weather events. Ultimately, aligning infrastructure development with historical rainfall insights is critical for maintaining water quality and safeguarding the environmental well-being of future generations. Integrating these climate patterns into national planning ensures that economic growth does not come at the expense of India’s vital natural resources.
+
+---
 ## Tech Stack
 
 - Python
