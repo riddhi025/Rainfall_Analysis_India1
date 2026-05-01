@@ -10,21 +10,17 @@ The analysis can support applications in agriculture planning, water resource ma
 ## Objective
 The main objectives of this project are:
 
-- Analyze rainfall distribution across different states/regions in India  
-- Identify seasonal rainfall patterns and monsoon effects  
-- Study long-term trends and variability in rainfall  
-- Visualize key insights using data analysis techniques  
+- Analyze rainfall trends over time
+- Study seasonal and regional variability
+- Model rainfall using statistical and ML techniques
+- Identify climate risks and extreme events
 
 ---
 
 ## Dataset Information
-- Source: Publicly available Indian rainfall dataset  
-- Type: Time-series / regional climate data  
-- Features:
-  - Year / Time period  
-  - State / Region  
-  - Monthly or seasonal rainfall values  
-  - Annual rainfall totals (if available)  
+- Source: Kaggle (Rainfall in India dataset)
+- Time span: 1901–present
+- Features: Monthly rainfall, seasonal aggregates, regions
 
 ---
 
@@ -50,14 +46,31 @@ The following visualizations were used:
 
 ---
 
+### Models Used:
+- Linear Regression
+- Random Forest
+
+### Key Finding:
+- Initial models showed high accuracy due to data leakage
+- After removing leakage, realistic performance achieved:
+  - R² ≈ 0.84 using previous year rainfall
+  - 
 ## Key Insights
 
-- Rainfall in India is highly seasonal, with a strong concentration during the monsoon period  
-- Coastal and northeastern regions receive significantly higher rainfall  
-- Inland and arid regions show consistently lower rainfall levels  
-- Rainfall variability differs significantly across states, reflecting diverse climatic conditions  
+- Monsoon contributes the majority of annual rainfall
+- Rainfall shows high interannual variability
+- Certain regions exhibit high climate risk (high variability)
+- Strong temporal dependency (previous year rainfall influences current year)
 
----
+## Limitations
+- No external climate variables (ENSO, temperature, etc.)
+- Regional aggregation hides local variations
+- Rainfall is inherently stochastic
+
+## Real-World Impact
+- Helps understand climate variability
+- Useful for agriculture planning
+- Identifies high-risk regions
 
 ## Project Structure
 
