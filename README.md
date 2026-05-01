@@ -72,8 +72,8 @@ The following visualizations were used:
 
 ## Project Structure
 Rainfall_Analysis_India1/
-│
-├── notebooks/ Jupyter notebooks containing analysis
-├── data/ Dataset files
-├── images/ Plots and visualizations
+|
+├── notebooks containing analysis
+├── dataset files
+├── images/ plots and visualizations
 ├── README.md Project documentation
