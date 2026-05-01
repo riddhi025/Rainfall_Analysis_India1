@@ -126,16 +126,6 @@ After removing these features and using only seasonal components and lag feature
 
 ---
 
-## Future Work
-
-- Incorporate climate indices such as ENSO and Indian Ocean Dipole
-- Use time series models like ARIMA or LSTM
-- Include satellite-based rainfall datasets
-- Perform spatial clustering of climate zones
-- Improve prediction using external climate variables
-
----
-
 ## Tech Stack
 
 - Python
