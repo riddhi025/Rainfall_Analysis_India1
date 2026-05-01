@@ -90,7 +90,7 @@ Key insights from analysis:
 
 ---
 
-## Important Observation (Data Leakage Fix)
+## Important Observation 
 
 Initial models showed very high accuracy due to inclusion of monthly rainfall features, which directly sum to annual rainfall.
 
